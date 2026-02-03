@@ -59,7 +59,13 @@ uv run examples/arm_ur5e.py
 uv run mjpython examples/arm_ur5e.py
 ```
 
-mink works with a variety of robots, including:
+## Visualization of MJCF Models
+
+```bash
+uv run python -m mujoco.viewer --mjcf examples/lecarm/lecarm.xml
+```
+
+## Avalilable demos
 
 * **Single arms**: [Franka Panda](https://github.com/kevinzakka/mink/blob/main/examples/arm_panda.py), [UR5e](https://github.com/kevinzakka/mink/blob/main/examples/arm_ur5e.py), [KUKA iiwa14](https://github.com/kevinzakka/mink/blob/main/examples/arm_iiwa.py), [ALOHA 2](https://github.com/kevinzakka/mink/blob/main/examples/arm_aloha.py)
 * **Dual arms**: [Dual Panda](https://github.com/kevinzakka/mink/blob/main/examples/dual_panda.py), [Dual iiwa14](https://github.com/kevinzakka/mink/blob/main/examples/dual_iiwa.py), [Flying Dual UR5e](https://github.com/kevinzakka/mink/blob/main/examples/flying_dual_arm_ur5e.py)
