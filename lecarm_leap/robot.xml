@@ -1,0 +1,232 @@
+<?xml version="1.0" ?>
+<!-- Generated using onshape-to-robot -->
+<!-- Onshape https://cad.onshape.com/documents/ede0a0dfc56c309d7daf7d43/w/aa817c518db1227619d8b87b/e/00133f59247376fd4591935d -->
+<mujoco model="lecarm_leap">
+  <compiler angle="radian" meshdir="assets" autolimits="true"/>
+  <default>
+    <default class="lecarm_leap">
+      <joint frictionloss="0.1" armature="0.005"/>
+      <position kp="50" dampratio="1"/>
+      <default class="visual">
+        <geom type="mesh" contype="0" conaffinity="0" group="2"/>
+      </default>
+      <default class="collision">
+        <geom group="3"/>
+      </default>
+    </default>
+  </default>
+  <worldbody>
+    <!-- Link base_link -->
+    <body name="base_link" pos="0 0 0" quat="1 0 0 0" childclass="lecarm_leap">
+      <inertial pos="-6.41129e-05 8.45518e-07 0.0371664" mass="0.362" fullinertia="0.000154171 0.000154109 0.00014817 5.209e-08 -6.15426e-07 6.355e-09"/>
+      <!-- Part base_link_parts -->
+      <geom type="mesh" class="visual" pos="-6.41129e-05 8.45518e-07 0.0371664" quat="1 0 0 0" mesh="base_link_visual" material="base_link_visual_material"/>
+      <geom type="mesh" class="collision" pos="-6.41129e-05 8.45518e-07 0.0371664" quat="1 0 0 0" mesh="base_link_collision" material="base_link_collision_material"/>
+      <!-- Link link_1 -->
+      <body name="link_1" pos="-0 -0 0.0645" quat="1 0 0 -0">
+        <!-- Joint from base_link to link_1 -->
+        <joint axis="0 0 1" name="1" type="hinge"/>
+        <inertial pos="-0.00219475 0.0179139 0.0338242" mass="0.444751" fullinertia="0.000237284 0.000247172 0.000237006 2.44725e-06 3.69642e-06 -2.04564e-05"/>
+        <!-- Part link_1_parts -->
+        <geom type="mesh" class="visual" pos="-0.00219475 0.0179139 0.0338242" quat="1 0 -0 0" mesh="link_1_visual" material="link_1_visual_material"/>
+        <geom type="mesh" class="collision" pos="-0.00219475 0.0179139 0.0338242" quat="1 0 -0 0" mesh="link_1_collision" material="link_1_collision_material"/>
+        <!-- Link link_2 -->
+        <body name="link_2" pos="-0.027175 0.02 0.037" quat="0.5 0.5 -0.5 -0.5">
+          <!-- Joint from link_1 to link_2 -->
+          <joint axis="0 0 1" name="2" type="hinge"/>
+          <inertial pos="0.19584 9.32605e-05 -0.025455" mass="0.709516" fullinertia="0.000407443 0.00635039 0.00621043 1.86329e-05 -3.1692e-05 -7.42427e-07"/>
+          <!-- Part link_2_parts -->
+          <geom type="mesh" class="visual" pos="0.19584 9.32605e-05 -0.025455" quat="0.5 -0.5 0.5 0.5" mesh="link_2_visual" material="link_2_visual_material"/>
+          <geom type="mesh" class="collision" pos="0.19584 9.32605e-05 -0.025455" quat="0.5 -0.5 0.5 0.5" mesh="link_2_collision" material="link_2_collision_material"/>
+          <!-- Link link_3 -->
+          <body name="link_3" pos="0.264 0 0" quat="1 -0 0 -0">
+            <!-- Joint from link_2 to link_3 -->
+            <joint axis="0 0 1" name="3" type="hinge"/>
+            <inertial pos="-0.176442 0.0543648 -0.0271165" mass="0.599094" fullinertia="0.00042845 0.00535031 0.00539284 0.000569238 -8.47245e-05 1.40712e-05"/>
+            <!-- Part link_3_parts -->
+            <geom type="mesh" class="visual" pos="-0.176442 0.0543648 -0.0271165" quat="0.5 -0.5 0.5 0.5" mesh="link_3_visual" material="link_3_visual_material"/>
+            <geom type="mesh" class="collision" pos="-0.176442 0.0543648 -0.0271165" quat="0.5 -0.5 0.5 0.5" mesh="link_3_collision" material="link_3_collision_material"/>
+            <!-- Link link_4 -->
+            <body name="link_4" pos="-0.245 0.06 -0.0504" quat="0 -0.707107 0.707107 0">
+              <!-- Joint from link_3 to link_4 -->
+              <joint axis="0 0 1" name="4" type="hinge"/>
+              <inertial pos="-0.0508877 0.0613607 -0.0229646" mass="0.417218" fullinertia="0.000472054 0.000433549 0.000574725 0.000211282 -7.46746e-06 8.31181e-06"/>
+              <!-- Part link_4_parts -->
+              <geom type="mesh" class="visual" pos="-0.0508877 0.0613607 -0.0229646" quat="0.707107 0 -0.707107 0" mesh="link_4_visual" material="link_4_visual_material"/>
+              <geom type="mesh" class="collision" pos="-0.0508877 0.0613607 -0.0229646" quat="0.707107 0 -0.707107 0" mesh="link_4_collision" material="link_4_collision_material"/>
+              <!-- Link link_5 -->
+              <body name="link_5" pos="-0.042 0.074 -0.02325" quat="0.5 -0.5 0.5 -0.5">
+                <!-- Joint from link_4 to link_5 -->
+                <joint axis="0 0 1" name="5" type="hinge"/>
+                <inertial pos="-0.00612774 1.28482e-06 0.0412389" mass="0.364709" fullinertia="0.000179673 0.000163623 0.000147355 -6.505e-09 5.51524e-06 7.7814e-08"/>
+                <!-- Part link_5_parts -->
+                <geom type="mesh" class="visual" pos="-0.00612774 1.28482e-06 0.0412389" quat="0 -0.707107 0.707107 0" mesh="link_5_visual" material="link_5_visual_material"/>
+                <geom type="mesh" class="collision" pos="-0.00612774 1.28482e-06 0.0412389" quat="0 -0.707107 0.707107 0" mesh="link_5_collision" material="link_5_collision_material"/>
+                <!-- Link link_6 -->
+                <body name="link_6" pos="-0.0305 -0 0.042" quat="0 -0.707107 0 0.707107">
+                  <!-- Joint from link_5 to link_6 -->
+                  <joint axis="0 0 1" name="6" type="hinge"/>
+                  <inertial pos="-0.000230076 0.000214398 0.0107083" mass="0.0731206" fullinertia="5.23416e-05 2.85619e-05 7.72732e-05 2.51222e-06 7.0365e-08 1.47423e-07"/>
+                  <!-- Part link_6_parts -->
+                  <geom type="mesh" class="visual" pos="-0.000230076 0.000214398 0.0107083" quat="0.5 0.5 0.5 0.5" mesh="link_6_visual" material="link_6_visual_material"/>
+                  <geom type="mesh" class="collision" pos="-0.000230076 0.000214398 0.0107083" quat="0.5 0.5 0.5 0.5" mesh="link_6_collision" material="link_6_collision_material"/>
+                  <!-- Link link_mcp_joint -->
+                  <body name="link_mcp_joint" pos="0.0517788 0.0561586 0.043" quat="0.5 0.5 -0.5 0.5">
+                    <!-- Joint from link_6 to link_mcp_joint -->
+                    <joint axis="0 0 1" name="7" type="hinge"/>
+                    <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                    <!-- Part link_mcp_joint_parts -->
+                    <geom type="mesh" class="visual" pos="-0.1485 0.213279 0.0561336" quat="0.5 0.5 0.5 -0.5" mesh="link_mcp_joint_visual" material="link_mcp_joint_visual_material"/>
+                    <geom type="mesh" class="collision" pos="-0.1485 0.213279 0.0561336" quat="0.5 0.5 0.5 -0.5" mesh="link_mcp_joint_collision" material="link_mcp_joint_collision_material"/>
+                    <!-- Link link_pip -->
+                    <body name="link_pip" pos="-0.0122 -0.0381 0.0145" quat="0.5 -0.5 0.5 -0.5">
+                      <!-- Joint from link_mcp_joint to link_pip -->
+                      <joint axis="0 0 1" name="8" type="hinge"/>
+                      <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                      <!-- Part link_pip_parts -->
+                      <geom type="mesh" class="visual" pos="-0.251379 -0.0416336 -0.1363" quat="0.5 0.5 0.5 0.5" mesh="link_pip_visual" material="link_pip_visual_material"/>
+                      <geom type="mesh" class="collision" pos="-0.251379 -0.0416336 -0.1363" quat="0.5 0.5 0.5 0.5" mesh="link_pip_collision" material="link_pip_collision_material"/>
+                      <!-- Link link_dip -->
+                      <body name="link_dip" pos="0.015 -0.01725 0.013" quat="0.5 0.5 0.5 -0.5">
+                        <!-- Joint from link_pip to link_dip -->
+                        <joint axis="0 0 1" name="9" type="hinge"/>
+                        <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                        <!-- Part link_dip_parts -->
+                        <geom type="mesh" class="visual" pos="0.1493 -0.266379 0.0243836" quat="0.5 -0.5 0.5 0.5" mesh="link_dip_visual" material="link_dip_visual_material"/>
+                        <geom type="mesh" class="collision" pos="0.1493 -0.266379 0.0243836" quat="0.5 -0.5 0.5 0.5" mesh="link_dip_collision" material="link_dip_collision_material"/>
+                        <!-- Link link_fingertip -->
+                        <body name="link_fingertip" pos="0 0.0361 -5e-05" quat="1 0 0 0">
+                          <!-- Joint from link_dip to link_fingertip -->
+                          <joint axis="0 0 1" name="10" type="hinge"/>
+                          <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                          <!-- Part link_fingertip_parts -->
+                          <geom type="mesh" class="visual" pos="0.1493 -0.302479 0.0244336" quat="0.5 -0.5 0.5 0.5" mesh="link_fingertip_visual" material="link_fingertip_visual_material"/>
+                          <geom type="mesh" class="collision" pos="0.1493 -0.302479 0.0244336" quat="0.5 -0.5 0.5 0.5" mesh="link_fingertip_collision" material="link_fingertip_collision_material"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                  <!-- Link link_thumb_mcp -->
+                  <body name="link_thumb_mcp" pos="-0.0105212 0.0316086 0.0459" quat="0.707107 -0 -0.707107 -0">
+                    <!-- Joint from link_6 to link_thumb_mcp -->
+                    <joint axis="0 0 1" name="19" type="hinge"/>
+                    <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                    <!-- Part link_thumb_mcp_parts -->
+                    <geom type="mesh" class="visual" pos="-0.1514 -0.0315836 0.150979" quat="0 -0.707107 -0.707107 -0" mesh="link_thumb_mcp_visual" material="link_thumb_mcp_visual_material"/>
+                    <geom type="mesh" class="collision" pos="-0.1514 -0.0315836 0.150979" quat="0 -0.707107 -0.707107 -0" mesh="link_thumb_mcp_collision" material="link_thumb_mcp_collision_material"/>
+                    <!-- Link link_thumb_pip -->
+                    <body name="link_thumb_pip" pos="-0 0.0143 0.013" quat="0.5 -0.5 -0.5 -0.5">
+                      <!-- Joint from link_thumb_mcp to link_thumb_pip -->
+                      <joint axis="0 0 1" name="20" type="hinge"/>
+                      <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                      <!-- Part link_thumb_pip_parts -->
+                      <geom type="mesh" class="visual" pos="0.137979 -0.1514 -0.0458836" quat="0.707107 0 -0.707107 -0" mesh="link_thumb_pip_visual" material="link_thumb_pip_visual_material"/>
+                      <geom type="mesh" class="collision" pos="0.137979 -0.1514 -0.0458836" quat="0.707107 0 -0.707107 -0" mesh="link_thumb_pip_collision" material="link_thumb_pip_collision_material"/>
+                      <!-- Link link_thumb_dip -->
+                      <body name="link_thumb_dip" pos="0 0.01435 0.017" quat="0.707107 -0.707107 -0 -0">
+                        <!-- Joint from link_thumb_pip to link_thumb_dip -->
+                        <joint axis="0 0 1" name="21" type="hinge"/>
+                        <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                        <!-- Part link_thumb_dip_parts -->
+                        <geom type="mesh" class="visual" pos="0.137979 0.0628836 -0.16575" quat="0.5 0.5 -0.5 -0.5" mesh="link_thumb_dip_visual" material="link_thumb_dip_visual_material"/>
+                        <geom type="mesh" class="collision" pos="0.137979 0.0628836 -0.16575" quat="0.5 0.5 -0.5 -0.5" mesh="link_thumb_dip_collision" material="link_thumb_dip_collision_material"/>
+                        <!-- Link link_thumb_fingertip -->
+                        <body name="link_thumb_fingertip" pos="-0 -0.0466 -0.00015" quat="0 0 -0 -1">
+                          <!-- Joint from link_thumb_dip to link_thumb_fingertip -->
+                          <joint axis="0 0 1" name="22" type="hinge"/>
+                          <inertial pos="0 0 0" mass="1e-09" fullinertia="1e-09 1e-09 1e-09 0 0 0"/>
+                          <!-- Part link_thumb_fingertip_parts -->
+                          <geom type="mesh" class="visual" pos="-0.137979 -0.109484 -0.1656" quat="0.5 0.5 0.5 0.5" mesh="link_thumb_fingertip_visual" material="link_thumb_fingertip_visual_material"/>
+                          <geom type="mesh" class="collision" pos="-0.137979 -0.109484 -0.1656" quat="0.5 0.5 0.5 0.5" mesh="link_thumb_fingertip_collision" material="link_thumb_fingertip_collision_material"/>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <asset>
+    <mesh file="merged/link_5_collision.stl"/>
+    <mesh file="merged/base_link_visual.stl"/>
+    <mesh file="merged/link_mcp_joint_visual.stl"/>
+    <mesh file="merged/link_thumb_dip_visual.stl"/>
+    <mesh file="merged/link_fingertip_collision.stl"/>
+    <mesh file="merged/link_dip_visual.stl"/>
+    <mesh file="merged/link_3_collision.stl"/>
+    <mesh file="merged/link_thumb_pip_collision.stl"/>
+    <mesh file="merged/link_3_visual.stl"/>
+    <mesh file="merged/link_pip_visual.stl"/>
+    <mesh file="merged/link_2_visual.stl"/>
+    <mesh file="merged/link_thumb_fingertip_collision.stl"/>
+    <mesh file="merged/link_1_collision.stl"/>
+    <mesh file="merged/link_thumb_pip_visual.stl"/>
+    <mesh file="merged/link_4_visual.stl"/>
+    <mesh file="merged/link_pip_collision.stl"/>
+    <mesh file="merged/link_thumb_dip_collision.stl"/>
+    <mesh file="merged/link_6_collision.stl"/>
+    <mesh file="merged/link_2_collision.stl"/>
+    <mesh file="merged/link_1_visual.stl"/>
+    <mesh file="merged/link_thumb_fingertip_visual.stl"/>
+    <mesh file="merged/link_4_collision.stl"/>
+    <mesh file="merged/link_thumb_mcp_visual.stl"/>
+    <mesh file="merged/link_fingertip_visual.stl"/>
+    <mesh file="merged/base_link_collision.stl"/>
+    <mesh file="merged/link_5_visual.stl"/>
+    <mesh file="merged/link_6_visual.stl"/>
+    <mesh file="merged/link_dip_collision.stl"/>
+    <mesh file="merged/link_thumb_mcp_collision.stl"/>
+    <mesh file="merged/link_mcp_joint_collision.stl"/>
+    <material name="base_link_visual_material" rgba="0.917647 0.917647 0.917647 1"/>
+    <material name="base_link_collision_material" rgba="0.917647 0.917647 0.917647 1"/>
+    <material name="link_1_visual_material" rgba="0.697405 0.697405 0.697405 1"/>
+    <material name="link_1_collision_material" rgba="0.697405 0.697405 0.697405 1"/>
+    <material name="link_2_visual_material" rgba="0.779591 0.779591 0.779591 1"/>
+    <material name="link_2_collision_material" rgba="0.779591 0.779591 0.779591 1"/>
+    <material name="link_3_visual_material" rgba="0.513749 0.533387 0.549097 1"/>
+    <material name="link_3_collision_material" rgba="0.513749 0.533387 0.549097 1"/>
+    <material name="link_4_visual_material" rgba="0.520598 0.548796 0.571354 1"/>
+    <material name="link_4_collision_material" rgba="0.520598 0.548796 0.571354 1"/>
+    <material name="link_5_visual_material" rgba="0.598295 0.630553 0.656359 1"/>
+    <material name="link_5_collision_material" rgba="0.598295 0.630553 0.656359 1"/>
+    <material name="link_6_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_6_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_mcp_joint_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_mcp_joint_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_pip_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_pip_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_dip_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_dip_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_fingertip_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_fingertip_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_mcp_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_mcp_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_pip_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_pip_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_dip_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_dip_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_fingertip_visual_material" rgba="0.901961 0.901961 0.901961 1"/>
+    <material name="link_thumb_fingertip_collision_material" rgba="0.901961 0.901961 0.901961 1"/>
+  </asset>
+  <actuator>
+    <position class="lecarm_leap" name="1" joint="1"/>
+    <position class="lecarm_leap" name="2" joint="2"/>
+    <position class="lecarm_leap" name="3" joint="3"/>
+    <position class="lecarm_leap" name="4" joint="4"/>
+    <position class="lecarm_leap" name="5" joint="5"/>
+    <position class="lecarm_leap" name="6" joint="6"/>
+    <position class="lecarm_leap" name="7" joint="7"/>
+    <position class="lecarm_leap" name="8" joint="8"/>
+    <position class="lecarm_leap" name="9" joint="9"/>
+    <position class="lecarm_leap" name="10" joint="10"/>
+    <position class="lecarm_leap" name="19" joint="19"/>
+    <position class="lecarm_leap" name="20" joint="20"/>
+    <position class="lecarm_leap" name="21" joint="21"/>
+    <position class="lecarm_leap" name="22" joint="22"/>
+  </actuator>
+  <equality/>
+</mujoco>

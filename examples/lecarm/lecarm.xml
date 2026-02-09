@@ -65,7 +65,7 @@
                 <body name="link_6" pos="-0.0225 -4.42242e-15 0.042" quat="0.612372 0.353553 -0.612372 -0.353553">
                   <!-- Joint from link_5 to link_6 -->
                   <joint axis="0 0 1" name="6" type="hinge"/>
-                  <inertial pos="-1.68757e-05 -9.6197e-05 0.0357891" mass="0.34613" fullinertia="0.000156095 0.000155915 0.000142738 -2.15276e-07 -1.84974e-07 -7.22974e-07"/>
+                  <inertial pos="-1.68757e-05 -9.6197e-05 0.0357891" mass="1.3" fullinertia="0.000156095 0.000155915 0.000142738 -2.15276e-07 -1.84974e-07 -7.22974e-07"/>
                   <!-- Part link_6_parts -->
                   <geom type="mesh" class="visual" pos="-1.68757e-05 -9.6197e-05 0.0357891" quat="0.683013 0.683013 -0.183013 -0.183013" mesh="link_6_visual" material="link_6_visual_material"/>
                   <geom type="mesh" class="collision" pos="-1.68757e-05 -9.6197e-05 0.0357891" quat="0.683013 0.683013 -0.183013 -0.183013" mesh="link_6_collision" material="link_6_collision_material"/>
